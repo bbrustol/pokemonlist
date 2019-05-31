@@ -20,14 +20,14 @@ class PokemonListViewModel(
 ) : BaseViewModel(application) {
 
     val dataReceived: MutableLiveData<List<Result>> = MutableLiveData()
-    private var tempData: ArrayList<Result> = arrayListOf()
     val listVisibility = MutableLiveData<Int>().apply { value = GONE }
     val flagFirstLoad = MutableLiveData<Boolean>().apply { value = false }
 
+    private var tempData: ArrayList<Result> = arrayListOf()
     private var offset = 0
     private var limit = 50
-    fun start() {
 
+    fun start() {
         configVisibility(ViewState.LOADING)
         coroutineScope.launch {
             val resource = pokemonBusiness.fetchPokemonlist(offset*limit, limit)

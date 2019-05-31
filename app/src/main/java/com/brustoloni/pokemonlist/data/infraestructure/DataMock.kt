@@ -19,8 +19,8 @@ class DataMock {
             STR_THUMB
         )
 
-        private const val NAME: String = "Bulbasaur"
-        private const val URL: String = "https://pokeapi.co/api/v2/pokemon/1/"
+        private const val NAME: String = ""
+        private const val URL: String = ""
         private const val STR_THUMB = ""
         const val ILLEGAL_ARGUMENT : String = "Illegal argument"
     }
