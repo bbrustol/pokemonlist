@@ -25,7 +25,7 @@ class ListAdapterTest {
 
         val adapter =
             moshi.adapter(PokemonListResponse::class.java)
-        val response = adapter.fromJson(json!!)
+        val response = adapter.fromJson(json)
 
         val result = response?.results?.get(0)
 
@@ -49,12 +49,11 @@ class ListAdapterTest {
         val json = ResourceUtils().openFile("list_response_empty.json")
         val adapter =
             moshi.adapter(PokemonListResponse::class.java)
-
         val response= adapter.fromJson(json)
 
-        assertTrue(response!!.next.isEmpty())
-        assertEquals(response.count, 0)
-        assertTrue(response.previous.isEmpty())
-        assertTrue(response.results.isNullOrEmpty())
+        assertTrue(response?.next.isNullOrEmpty())
+        assertEquals(response?.count, 0)
+        assertTrue(response?.previous.isNullOrEmpty())
+        assertTrue(response?.results.isNullOrEmpty())
     }
 }

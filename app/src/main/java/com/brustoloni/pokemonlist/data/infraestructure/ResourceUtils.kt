@@ -4,7 +4,7 @@ import java.util.*
 
 class ResourceUtils {
 
-    fun openFile(pathFile: String): String? {
+    fun openFile(pathFile: String): String {
 
         val classLoader = this.javaClass.classLoader
         val resourceAsStream = classLoader?.getResourceAsStream(pathFile)
