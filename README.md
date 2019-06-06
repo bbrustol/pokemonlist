@@ -11,6 +11,6 @@
 
 # Tests
 • MockK<br>
-• Expresso<br>
+• Espresso<br>
 • Orchestrator<br>
 • Mockwebserver
